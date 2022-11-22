@@ -2,7 +2,7 @@
 
 The `signifly/laravel-domain-commands` package adds a handful of useful Artisan commands to your Laravel application. It assumes you are utilizing the Domain Driven Design approach.
 
-It is heavily inspired by the DDD approach mentioned in [this great article](https://stitcher.io/blog/organise-by-domain) by Brent from Spatie.
+It is heavily inspired by the DDD approach explained in [this great book](https://spatie.be/products/laravel-beyond-crud) by Spatie.
 
 In addition, it assumes that you have a separate namespace for your domain. Take a look of this example of the autoload section from a composer.json file:
 ```json
@@ -87,10 +87,18 @@ php artisan domain:policy UserPolicy -d User
 
 **Rules**
 
-Generate a new Rule class usign the `domain:rule` command:
+Generate a new Rule class using the `domain:rule` command:
 
 ```bash
-php artian domain:rule CustomEmailRule -d User
+php artisan domain:rule CustomEmailRule -d User
+```
+
+**Action Test**
+
+Generate a new test class using the `domain:action-test` command:
+
+```bash
+php artisan domain:action-test CreateUserActionTest -d User
 ```
 
 ## Installation
@@ -108,6 +116,16 @@ You can optionally publish the config file with:
 
 ```bash
 php artisan vendor:publish --tag="domain-commands-config"
+```
+
+## Change domain namespace
+
+You can change the namespace in the published config file, 
+in case you change the project structure to organize the application 
+code in a separate folder as seen in the Spatie book.
+
+```php
+    'domain_root' => 'src',
 ```
 
 ## Testing
