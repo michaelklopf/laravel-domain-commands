@@ -121,11 +121,11 @@ php artisan vendor:publish --tag="domain-commands-config"
 ## Change domain namespace
 
 You can change the namespace in the published config file, 
-in case you change the project structure to organize the application 
-code in a separate folder as seen in the Spatie book.
+if you change the project structure to organize the application 
+code in a different root folder.
 
 ```php
-    'domain_root' => 'src',
+'domain_root' => 'src',
 ```
 
 ## Testing
