@@ -34,12 +34,12 @@ class DTOCommand extends DomainGeneratorCommand
     protected function getDefaultNamespace($rootNamespace)
     {
         if ($domain = $this->option('domain')) {
-            return "{$rootNamespace}\\{$domain}\\DTO";
+            return "{$rootNamespace}\\{$domain}\\DataTransferObjects";
         }
 
         $defaultNamespace = config('domain-commands.default_namespace');
 
-        return "{$rootNamespace}\\{$defaultNamespace}\\DTO";
+        return "{$rootNamespace}\\{$defaultNamespace}\\DataTransferObjects";
     }
 
     /**

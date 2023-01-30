@@ -2,8 +2,8 @@
 
 namespace DummyNamespace;
 
-use Spatie\DataTransferObject\DataTransferObject;
+use Spatie\LaravelData\Data;
 
-final class DummyClass extends DataTransferObject
+final class DummyClass extends Data
 {
 }
